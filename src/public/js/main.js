@@ -39,13 +39,13 @@ $(function(){
     });
 
     socket.on('new message', function(data){
-        chat.append(data + '<br>');
+        chat.append('<b>' + data.nick + ': </b>' + data.msg + '<br>');
     });
 
     socket.on('usernames', data => {
         let html = '';
         for(let i = 0; i < data.length; i++){
-            html = '<p><i class="fas fa-user-alt"></i>'+data[i]+'</p>';
+            html += '<p><i class="fas fa-user-alt"></i>'+data[i]+'</p>';
             console.log(data[i]);
         }
         username.append(html);
