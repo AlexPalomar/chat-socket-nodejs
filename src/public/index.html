@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Socket.io</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/8f5d9387ee.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-ligth bg-light">
+        <a class="navbar-brand mx-auto" href="/">Chat with Socket</a>
+    </nav>
+
+    <div class="card col-md-4 mt-5 mx-auto" id="nickWrap">
+        <div class="card-header">
+            <h3>Enter your Username:</h3>
+        </div>
+        <p id="nickError"></p>
+        <div class="card-body">
+            <form id="nickForm">
+                <input type="text" id="nickname" class="form-control">
+                <button type="submit" class="btn btn-primary bnt-block mt-2"><i class="fas fa-location-arrow"></i> Send</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="container" id="contentWrap">
+        <div class="row mt-2">
+            <div class="col-md-6 offset-md-1">
+                <div class="card">
+                    <div class="card-header">
+                        <g4>let's Chat</g4>
+                    </div>
+                    <div id="chat" class="card-body"></div>
+                    <form id="message-form" class="card-footer">
+                        <div class="input-group">
+                            <input type="text" id="message" class="form-control">
+                            <div class="input-group-append">
+                                <input type="submit" id="" class="btn btn-primary">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="card col-md-3">
+                <div class="card-header">
+                    <h3>Users</h3>
+                </div>
+                <div class="card-body">
+                    <div id="usernames"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+<div class="image-container hide-percy flex-grow-1" style="background-image: url('https://dewey.tailorbrands.com/production/brand_version_mockup_image/96/2961936096_f9b88aa7-b83c-4cc5-9d2d-54f3db4e06d7.png?cb=1588971759');" data-testing-id="edit`-brand-mockup-img"></div>
